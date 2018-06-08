@@ -161,13 +161,13 @@ export default {
     total: 0,
   }),
   watch: {
-    mode: () => { this.updateTotal() },
-    platform: () => { this.updateTotal() },
-    quantity: () => { this.updateTotal() },
-    end9: () => { this.updateTotal() },
-    stream: () => { this.updateTotal() },
-    oldbooster: () => { this.updateTotal() },
-    playwithbooster: () => { this.updateTotal() },
+    mode: () => { this.updateTotal(); },
+    platform: () => { this.updateTotal(); },
+    quantity: () => { this.updateTotal(); },
+    end9: () => { this.updateTotal(); },
+    stream: () => { this.updateTotal(); },
+    oldbooster: () => { this.updateTotal(); },
+    playwithbooster: () => { this.updateTotal(); },
   },
   props: {},
   methods: {
@@ -210,7 +210,7 @@ export default {
     },
   },
   mounted() {
-    { this.updateTotal() };
+    this.updateTotal();
   },
 
 

@@ -11,10 +11,11 @@ body {
 }
 
 header {
-    height: 410px;
+    height: 600px;
     background: url('banner1.png') no-repeat top;
     background-size: cover;
     padding-top: 1px;
+    background-position: bottom;
 }
 
 header h1 {
@@ -87,6 +88,12 @@ a {
     box-shadow: 0 0 10pt lightgray;
     padding: 20px 40px;
 }
+
+#faq-answers {
+    background: #f0ece3;
+    padding: 1em;
+}
+
 
 #content-grid-simple {
     background-color: #ffffff;
@@ -360,4 +367,17 @@ main {
 
 .component-header {
     user-select: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.nomargin {
+    margin: 0;
 }

@@ -9,6 +9,9 @@
             <div class="menu">
                 <img class="header-logo" v-bind:src="logoPath" />
             </div>
+            <div class="menu">
+                <p class="text-center">boost your rank without you having to do <br/> any more than purchase through our website</p>
+            </div>
         </header>
         <main>
             <div id="steps-bar">
@@ -51,36 +54,31 @@ export default {
       { name: 'Confirm order' },
       { name: 'Payment' },
       { name: 'Finish' }],
+    menus: [
+      {
+        link: '/about',
+        value: 'ABOUT',
+      },
+      {
+        link: '/contact',
+        value: 'CONTACT',
+      },
+      {
+        link: '/faq',
+        value: 'FAQ',
+      },
+      {
+        link: '/login',
+        value: 'LOGIN',
+      },
+    ],
+    logoPath: logoImage,
   }),
   components: {
     Button, ButtonGroup, LoginBar, Steps, Step,
   },
-  data() {
-    return {
-      menus: [
-        {
-          link: '/about',
-          value: 'ABOUT',
-        },
-        {
-          link: '/contact',
-          value: 'CONTACT',
-        },
-        {
-          link: '/faq',
-          value: 'FAQ',
-        },
-        {
-          link: '/login',
-          value: 'LOGIN',
-        },
-      ],
-      logoPath: logoImage,
-    };
-  },
 };
 </script>
-<<<<<<< HEAD
 <style lang="less">
 .steps-bar-title {
   font-size: 20px;
@@ -131,31 +129,27 @@ export default {
     }
   }
 }
-=======
+.menu {
+    text-align: center;
+    margin: 3em 0;
+}
 
-<style lang="less">
-    .menu {
-        text-align: center;
-        margin: 3em 0;
-    }
+.menu-item {
+    margin: 0 2em;
+}
 
-    .menu-item {
-        margin: 0 2em;
-    }
+.menu-link {
+    color: white;
+    text-decoration: none;
+}
 
-    .menu-link {
-        color: white;
-        text-decoration: none;
-    }
+.login-menu-link {
+    background: #00b4ff;
+    padding: .5em;
+}
 
-    .login-menu-link {
-        background: #00b4ff;
-        padding: .5em;
-    }
-
-    .header-logo {
-        width: 350px;
-        margin-top: 2em;
-    }
->>>>>>> c16877d507775e0d5f228239e9968ed77eb35d97
+.header-logo {
+    width: 350px;
+    margin-top: 2em;
+}
 </style>

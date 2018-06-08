@@ -1,14 +1,12 @@
 <template>
-    <div>
-        <p>
-            By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all
-            applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
-            If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials
-            contained in this web site are protected by applicable copyright and trade mark law.<br>
-            <br>
+    <div class="mt-1">
+        <p class="nomargin text-center uppercase">By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use,</p> 
+        <p class="nomargin text-center uppercase">all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
+        <p class="nomargin text-center uppercase">If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p> 
+        <p class="nomargin text-center uppercase">The materials contained in this web site are protected by applicable copyright and trade mark law.
         </p>
 
-        <a id="modal-link" @click="toggleModal">Terms & Conditions of Use</a>
+        <!-- <a id="modal-link" @click="toggleModal">Terms & Conditions of Use</a> -->
 
         <div v-if="this.modal_visible" id="terms-modal" :class="{modal: true, visible: this.modal_visible}" @click="toggleModal">
             <div class="modal-content">

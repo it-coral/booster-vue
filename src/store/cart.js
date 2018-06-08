@@ -7,6 +7,7 @@ const MULT_SQUAD_EXTRA = 0.0;
 const BONUS_9_KILLS = 5;
 const BONUS_STREAM = 2;
 const BONUS_OLD_BOOSTER = 0;
+const BONUS_PLAY_WITH = 5;
 
 const getPrice = (item, discount) => {
   let multiplier = BASE_MULTIPLIER;
@@ -23,11 +24,11 @@ const getPrice = (item, discount) => {
   }
 
   multiplier -= discount;
-
   let valuePerGame = BASE_VALUE_PER_GAME;
   valuePerGame += (item.specials.includes('end9') ? BONUS_9_KILLS : 0);
   valuePerGame += (item.specials.includes('stream') ? BONUS_STREAM : 0);
   valuePerGame += (item.specials.includes('oldbooster') ? BONUS_OLD_BOOSTER : 0);
+  valuePerGame += (item.specials.includes('playwithbooster') ? BONUS_PLAY_WITH : 0);
 
   let total = item.quantity * valuePerGame;
   if (item.quantity >= 5) {

@@ -82,9 +82,14 @@ a {
     background-color: #ababab;
 }
 
-#faq, #order-form, #cart, #content-grid-simple {
+#faq, #cart {
     background-color: #f6f6f6;
     box-shadow: 0 0 10pt lightgray;
+    padding: 20px 40px;
+}
+
+#content-grid-simple {
+    background-color: #ffffff;
     padding: 20px 40px;
 }
 
@@ -93,12 +98,13 @@ a {
 }
 
 #order-form {
+    background-color: #ffffff;
     grid-area: order-form;
+    text-transform: uppercase;
 }
 
 #order-form fieldset {
     border: none;
-    margin: 5pt 0;
 }
 
 #order-form fieldset legend {
@@ -132,6 +138,10 @@ main {
     display: grid;
     grid-gap: 10pt;
     grid-template-areas: "steps" "buttons";
+}
+
+#steps-bar {
+    margin-bottom: 100px;
 }
 
 #login-bar {
@@ -299,7 +309,6 @@ main {
 #total-amount {
     font-size: 2.5em;
     font-weight: 500;
-    color: #f26722;
     margin: 6pt
 }
 
@@ -345,7 +354,6 @@ main {
 }
 
 #buttons-bar {
-    border-top: 1px solid #d8dbe2;
     padding-top: 10pt;
     text-align: right;
 }

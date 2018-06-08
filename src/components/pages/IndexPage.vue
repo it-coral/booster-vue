@@ -1,13 +1,11 @@
 <template>
     <ContentGridSimple :active="0">
         <template slot="content">
-            <el-row :gutter="40">
-                <el-col :span="14">
-                    <Faq/>
-                </el-col>
-                <el-col :span="10">
-                    <OrderForm/>
-                </el-col>
+            <el-row :span="10">
+                <OrderForm/>
+            </el-row>
+            <el-row :span="14">
+                <Faq/>
             </el-row>
         </template>
     </ContentGridSimple>

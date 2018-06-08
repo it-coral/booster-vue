@@ -1,7 +1,14 @@
 <template>
     <div>
         <header>
-            <h1>Fortnite Boosted</h1>
+            <div class="menu">
+                <span class="menu-item" v-for="item in menus" :key="item.value">
+                    <a v-bind:href="item.link" :class="item.value != 'LOGIN' ? 'menu-link' : 'menu-link login-menu-link'">{{item.value}}</a>
+                </span>
+            </div>
+            <div class="menu">
+                <img class="header-logo" v-bind:src="logoPath" />
+            </div>
         </header>
         <main>
             <div id="steps-bar">
@@ -30,8 +37,7 @@
 <script>
 import { Button, ButtonGroup, Steps, Step } from 'element-ui';
 import LoginBar from '@/components/LoginBar.vue';
-// import Steps from '@/components/steps/Steps'
-// import Step from '@/components/steps/Step'
+import logoImage from '@/assets/logo.png';
 
 export default {
   name: 'ContentGrid',
@@ -49,8 +55,32 @@ export default {
   components: {
     Button, ButtonGroup, LoginBar, Steps, Step,
   },
+  data() {
+    return {
+      menus: [
+        {
+          link: '/about',
+          value: 'ABOUT',
+        },
+        {
+          link: '/contact',
+          value: 'CONTACT',
+        },
+        {
+          link: '/faq',
+          value: 'FAQ',
+        },
+        {
+          link: '/login',
+          value: 'LOGIN',
+        },
+      ],
+      logoPath: logoImage,
+    };
+  },
 };
 </script>
+<<<<<<< HEAD
 <style lang="less">
 .steps-bar-title {
   font-size: 20px;
@@ -101,4 +131,31 @@ export default {
     }
   }
 }
+=======
+
+<style lang="less">
+    .menu {
+        text-align: center;
+        margin: 3em 0;
+    }
+
+    .menu-item {
+        margin: 0 2em;
+    }
+
+    .menu-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    .login-menu-link {
+        background: #00b4ff;
+        padding: .5em;
+    }
+
+    .header-logo {
+        width: 350px;
+        margin-top: 2em;
+    }
+>>>>>>> c16877d507775e0d5f228239e9968ed77eb35d97
 </style>

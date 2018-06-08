@@ -38,7 +38,8 @@ export default {
     return {
       paypal: {
         credentials: {
-          sandbox: 'AcxHfWkfclw4WMUj35YyOrXgjUAajk6qTuNa0QbV7AQIQc34mKwmbEQBpkaFerzHznezNLaH_THXsL1m',
+          // sandbox: 'AcxHfWkfclw4WMUj35YyOrXgjUAajk6qTuNa0QbV7AQIQc34mKwmbEQBpkaFerzHznezNLaH_THXsL1m',
+          sandbox: 'AeQSSnIFZBu8lPWFLG51pK8i9I_Cc7EIafLHbRFSFLw3IjRm7nC-G-XWD0I_4q0mov7NC16q4faP38cE',
         },
         style: {
           label: 'checkout',

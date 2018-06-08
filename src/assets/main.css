@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    height: 18em;
+    height: 410px;
     background: url('banner1.png') no-repeat top;
     background-size: cover;
     padding-top: 1px;
